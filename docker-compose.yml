@@ -1,0 +1,9 @@
+version: "2"
+services:
+  kata:
+    build: .
+    volumes:
+      - .:/kata
+volumes:
+  bundle:
+    driver: local

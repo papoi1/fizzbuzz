@@ -1,0 +1,7 @@
+FROM ruby:2.4.2
+
+ENV KATA /kata
+
+WORKDIR $KATA
+
+ADD . $KATA
