@@ -7,13 +7,20 @@ class FizzBuzz
 
     def translate(number)
       result = ""
-      result = FIZZ if divisible?(number, FIZZ_NUMBER)
-      result = result + BUZZ if divisible?(number, BUZZ_NUMBER)
-      result = number.to_s if result == ""
+      result.prepend(FIZZ) if fizz?(number)
+      result << BUZZ  if buzz?(number)
+      result = number.to_s if !fizz?(number) && !buzz?(number)
       return result
     end
 
     private
+    def fizz?(number)
+      divisible?(number, FIZZ_NUMBER)
+    end
+
+    def buzz?(number)
+      divisible?(number, BUZZ_NUMBER)
+    end
 
     def divisible?(number, divider)
       return (number % divider == 0)

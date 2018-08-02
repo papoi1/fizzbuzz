@@ -34,7 +34,6 @@ class TestFizzBuzz < Test::Unit::TestCase
     translated = FizzBuzz.translate(fizz_buzz_number)
 
     assert_equal(translated, "fizzbuzz")
-
   end
 
 end
